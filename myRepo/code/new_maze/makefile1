@@ -1,0 +1,14 @@
+main: main.o stack.o maze.o
+	gcc  -o main main.o stack.o maze.o
+main.o: main.c main.h stack.c stack.h
+	gcc -c main.c
+stack.o:stack.c stack.h main.h
+	gcc -c stack.c
+maze.o:maze.c maze.h main.h
+	gcc -c maze.c
+
+clean:
+	@echo "Cleaning project"
+	-rm main *.o
+	@echo "Clean completed"
+.PHONY:clean

@@ -1,0 +1,7 @@
+include $(sfname)
+jey:
+$(sfname):
+
+.PHONY:clean
+clean:
+	-rm jey $(objects)

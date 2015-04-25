@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include "stack.h"
+//"static" prevents outside access
+int main(){
+	/*
+	void push(char);	//External linkage.extern key word is option.
+	char pop(void);
+	int is_empty(void);
+	*/
+	//static means a internal linkage.
+	//extern is not optional here
+//	push('a');
+//	push('b');
+//	push('c');
+//	while(!is_empty())
+//		putchar(pop());
+//	putchar('\n');
+
+
+
+
+
+	return 0;
+}

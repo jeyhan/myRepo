@@ -1,0 +1,7 @@
+objects=jey.o
+jey:
+$(objects):
+
+.PHONY:clean
+clean:
+	-rm jey $(objects)

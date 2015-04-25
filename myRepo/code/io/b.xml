@@ -1,0 +1,14 @@
+<-- config of http -->
+<http>
+	<domain>www.mysite.com</domain>
+	<port>8080</port>
+	<cgihome>/cgi-bin</cgihome>
+</http>
+
+
+<-- config of database -->
+<database>
+	<server>mysql</server>
+	<user>myname</user>
+	<password>hanjinwei3156</password>
+</database>

@@ -1,0 +1,39 @@
+Stack push and pop while function call.Before a function call occurs,argc 
+should be push into stack in order by relative from %esp ,such as: 
+"movl $2,4(%esp)",then use call instruction.the called function use agrcs 
+by relative from %ebp,such as :12(%ebp).
+
+gives agrcs to called function using %esp.
+uses argcs from caller function using %ebp.
+
+The fristly instructions is:
+pushl	%ebp
+movl 	%esp, %ebp
+subl	$?, %esp
+
+Which makes %ebp in called function equals to %esp in caller.
+And %esp changes by subl,the number of it is local vailable space.
+if no argc pass into ? == 0.
+
+So caller's %esp will become calleder's %ebp.
+
+Caller push argcs into his stack frame,and push return address.
+Calleder push ebp which points formal stacks' base.
+
+%esp is top of a stack frame,%ebp is base.
+
+So the pushed %ebp must belong to last stack frame.
+The called push ebp for caller.
+
+Argcs and locals all accesses by compare to ebp.
+
+??????????????????
+WHY bar() NEEDS A 0X10 OFFSET FOR ESP, while two int locals?
+
+Access passed args by ebp+, and access local varibes by ebp-.
+Args pushed into stack from right to left.
+
+The diffrence between link and dynamic link is:
+
+internal linkage--private
+external linkage--public
